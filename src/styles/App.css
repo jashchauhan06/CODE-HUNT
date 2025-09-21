@@ -1999,6 +1999,7 @@
   align-items: center !important;
   justify-content: space-between !important;
   padding: 1.5rem 0 1rem 0 !important;
+  margin-top: 25px !important;
 }
 
 .flex-1 {
