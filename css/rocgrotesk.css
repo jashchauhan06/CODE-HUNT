@@ -1,0 +1,19 @@
+/*
+ * https://use.typekit.net/jnq0hye.css
+ *
+ * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
+ */
+
+@import url("p.css");
+
+@font-face {
+font-family:"roc-grotesk";
+src:url("https://use.typekit.net/af/5eb19c/00000000000000007735b7d0/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/5eb19c/00000000000000007735b7d0/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/5eb19c/00000000000000007735b7d0/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;font-display:swap;ascent-override:110%;
+}
+
+@font-face {
+font-family:"roc-grotesk";
+src:url("https://use.typekit.net/af/5eb19c/00000000000000007735b7d0/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/5eb19c/00000000000000007735b7d0/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/5eb19c/00000000000000007735b7d0/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;font-display:swap;ascent-override:110%;
+}
