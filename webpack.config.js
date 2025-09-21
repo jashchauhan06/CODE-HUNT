@@ -49,22 +49,26 @@ module.exports = {
       defaults: false,
     }),
     // Copy favicon and other static assets
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'src/images/favicon.ico',
-          to: 'images/favicon.ico'
-        },
-        {
-          from: 'src/images/apple-touch-icon.png',
-          to: 'images/apple-touch-icon.png'
-        },
-        {
-          from: 'src/.well-known',
-          to: '.well-known'
-        }
-      ]
-    })
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: 'src/images/csi-logo.png',
+              to: 'images/favicon.ico'
+            },
+            {
+              from: 'src/images/apple-touch-icon.png',
+              to: 'images/apple-touch-icon.png'
+            },
+            {
+              from: 'src/.well-known',
+              to: '.well-known'
+            },
+            {
+              from: 'public/_redirects',
+              to: '_redirects'
+            }
+          ]
+        })
   ],
   // No devServer - completely removed WebSocket functionality
 };
