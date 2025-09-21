@@ -736,8 +736,177 @@
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
 }
 
-/* Responsive Design */
+/* ========================================
+   MOBILE-FIRST RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Mobile and Small Tablets */
 @media (max-width: 768px) {
+  /* Navigation Mobile Styles */
+  .nav-wrapper {
+    min-height: 60px;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-wrapper nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 0 !important;
+  }
+  
+  .nav-wrapper .left-wrapper {
+    position: static !important;
+    transform: none !important;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-wrapper .right-wrapper {
+    position: static !important;
+    transform: none !important;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .csi-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+  
+  .csi-text {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .csi-title {
+    font-size: 0.9rem !important;
+    line-height: 1.2;
+    white-space: normal;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  .signin-btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  /* Main Layout Mobile */
+  .page-container {
+    padding: 1rem;
+  }
+  
+  .event-page-content-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .event-page-left,
+  .event-page-right {
+    width: 100%;
+    flex: none;
+  }
+  
+  /* Event Cover Mobile */
+  .event-cover-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .event-cover {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+  }
+  
+  /* Content Cards Mobile */
+  .content-card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .card-title {
+    margin-bottom: 0.75rem;
+  }
+  
+  .title-label {
+    font-size: 0.9rem;
+  }
+  
+  /* Countdown Mobile */
+  .countdown-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .countdown-item {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+  
+  /* Registration Card Mobile */
+  .registration-card {
+    text-align: center;
+  }
+  
+  .registration-status {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .registration-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  
+  .register-button {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* About Event Mobile */
+  .about-title {
+    font-size: 1.3rem;
+  }
+  
+  .about-section {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section h4 {
+    font-size: 1rem;
+  }
+  
+  .about-section p {
+    font-size: 0.85rem;
+  }
+  
+  .about-list {
+    padding-left: 1.2rem;
+  }
+  
+  .about-list li {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  /* Dashboard Mobile */
   .dashboard-wrapper {
     padding: 1rem;
   }
@@ -760,20 +929,431 @@
     grid-template-columns: 1fr;
   }
   
-  .about-title {
-    font-size: 1.3rem;
+  /* Forms Mobile */
+  .registration-form-container,
+  .login-form-container {
+    padding: 1rem;
   }
   
-  .about-section {
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .form-description {
+    font-size: 0.9rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .form-input,
+  .form-select {
+    width: 100%;
     padding: 0.75rem;
-  }
-  
-  .about-section h4 {
     font-size: 1rem;
   }
   
+  .form-label {
+    font-size: 0.9rem;
+  }
+  
+  .submit-button,
+  .login-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Member Forms Mobile */
+  .member-form {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .member-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  /* Navigation Extra Small */
+  .nav-wrapper {
+    min-height: 50px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .csi-logo {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .csi-title {
+    font-size: 0.8rem !important;
+    line-height: 1.1;
+  }
+  
+  .signin-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Main Layout Extra Small */
+  .page-container {
+    padding: 0.5rem;
+  }
+  
+  .event-page-content-wrapper {
+    gap: 1rem;
+  }
+  
+  /* Content Cards Extra Small */
+  .content-card {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .title-label {
+    font-size: 0.8rem;
+  }
+  
+  /* Countdown Extra Small */
+  .countdown-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .countdown-item {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .countdown-number {
+    font-size: 1.2rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.6rem;
+  }
+  
+  /* About Event Extra Small */
+  .about-title {
+    font-size: 1.1rem;
+  }
+  
+  .about-section {
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .about-section h4 {
+    font-size: 0.9rem;
+  }
+  
+  .about-section p {
+    font-size: 0.8rem;
+  }
+  
   .about-list {
-    padding-left: 1.2rem;
+    padding-left: 1rem;
+  }
+  
+  .about-list li {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Forms Extra Small */
+  .registration-form-container,
+  .login-form-container {
+    padding: 0.75rem;
+  }
+  
+  .form-title {
+    font-size: 1.3rem;
+  }
+  
+  .form-subtitle {
+    font-size: 1rem;
+  }
+  
+  .form-description {
+    font-size: 0.85rem;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .form-label {
+    font-size: 0.85rem;
+  }
+  
+  .submit-button,
+  .login-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Member Forms Extra Small */
+  .member-form {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .member-title {
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 360px) {
+  .nav-wrapper {
+    padding: 0.25rem;
+  }
+  
+  .csi-title {
+    font-size: 0.75rem !important;
+  }
+  
+  .page-container {
+    padding: 0.25rem;
+  }
+  
+  .content-card {
+    padding: 0.5rem;
+  }
+  
+  .countdown-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .about-title {
+    font-size: 1rem;
+  }
+  
+  .form-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .nav-wrapper {
+    min-height: 50px;
+  }
+  
+  .nav-wrapper nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .nav-wrapper .left-wrapper {
+    flex-direction: row;
+    width: auto;
+  }
+  
+  .nav-wrapper .right-wrapper {
+    width: auto;
+  }
+  
+  .csi-title {
+    font-size: 0.8rem !important;
+  }
+  
+  .event-page-content-wrapper {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .event-page-left {
+    flex: 0 0 40%;
+  }
+  
+  .event-page-right {
+    flex: 1;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .csi-logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .event-cover {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .signin-btn,
+  .register-button,
+  .submit-button,
+  .login-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .form-input,
+  .form-select {
+    min-height: 44px;
+  }
+  
+  .countdown-item {
+    min-height: 60px;
+  }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Improve touch targets */
+  .btn, .form-input, .form-select {
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+    tap-highlight-color: rgba(102, 126, 234, 0.3);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better text rendering on mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Prevent zoom on input focus */
+  .form-input,
+  .form-select {
+    font-size: 16px;
+  }
+  
+  /* Better button spacing */
+  .btn {
+    margin: 0.25rem 0;
+  }
+  
+  /* Improve card readability */
+  .content-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Better list spacing */
+  .about-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  /* Improve form spacing */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  /* Better section spacing */
+  .team-section,
+  .members-section,
+  .account-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Improve member form layout */
+  .member-form {
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 8px;
+  }
+  
+  /* Better error/success message display */
+  .error-message,
+  .success-message {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Improve loading states */
+  .spinner {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Better navigation spacing */
+  .nav-wrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Improve event cover display */
+  .event-cover-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Better countdown display */
+  .countdown-container {
+    margin: 1rem 0;
+  }
+  
+  /* Improve registration card */
+  .registration-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Better dashboard layout */
+  .dashboard-wrapper {
+    min-height: 100vh;
+  }
+  
+  .registration-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Improve member card display */
+  .member-card {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Better action buttons */
+  .action-button {
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+  
+  /* Improve quick actions */
+  .quick-actions {
+    margin-top: 1.5rem;
   }
 }
 
