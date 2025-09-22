@@ -57,6 +57,57 @@ body {
   .event-page-mobile-only {
     display: none !important;
   }
+  
+  /* Mobile-specific login page spacing fixes */
+  .login-page-wrapper {
+    padding: 1rem !important;
+    min-height: 100vh !important;
+  }
+  
+  .login-form-container {
+    max-width: 400px !important;
+    padding: 1.5rem !important;
+    margin: 0 auto !important;
+  }
+  
+  .login-form-header {
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .login-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .login-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .login-description {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .login-form {
+    gap: 1.25rem !important;
+  }
+  
+  .form-options {
+    margin: 0.75rem 0 !important;
+  }
+  
+  .login-button {
+    padding: 0.875rem 1.75rem !important;
+    font-size: 0.95rem !important;
+    max-width: 180px !important;
+  }
+  
+  .login-footer {
+    margin-top: 1.25rem !important;
+    padding-top: 0.75rem !important;
+  }
 }
 
 /* App-specific styles */
