@@ -134,7 +134,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="login-footer">
-                  <p>Don't have an account? <a href="#" className="signup-link">Sign up here</a></p>
+                  <p>Don't have an account? <a href="/register" className="signup-link">Sign up here</a></p>
                 </div>
               </form>
             </div>
