@@ -34,14 +34,39 @@ const AboutCard: React.FC<AboutCardProps> = ({ event }) => {
         ) : (
           <div className="text-tinted">
             <div className="about-event-content">
-              <h3 className="about-title">🔥 CODE HUNT X DEMON SLAYER 🔥</h3>
+              <h3 className="about-title">⚔️ Unsheathe your keyboards, Slayers! ⚔️</h3>
 
               <div className="about-section">
-                <h4>🎯 Event Overview</h4>
                 <p>
-                  The demons 👹 of riddles and puzzles have invaded your campus 🏛️and only true Slayers can defeat them. Armed with logic 🧠 as your blade and wit as your breathing style, you must hunt down clues 🔍 scattered across the college.
+                  The scent of demonic bugs is in the air, and a new mission has arrived! The CSI Student Chapter calls upon the sharpest minds to join the corps.
+                </p>
+                
+                <p>
+                  <strong>Get ready for CodeHunt X Demon Slayer!</strong><br/>
+                  Master your 'Code Breathing' techniques, hunt down every last error, and rise to the rank of Hashira. This isn't just a competition; it's the Final Selection.
+                </p>
 
-                  Each riddle ❓ cracked is a demon conquered ⚔️, bringing you closer to the final secret 🏆. Only the sharpest hunters will rise to the rank of Hashira of Code.
+                <p className="motto">
+                  <em>Code like a Hashira. Hunt like a Slayer.</em>
+                </p>
+
+                <div className="event-details">
+                  <p><strong>🗓 Date:</strong> Tuesday, 23 Sep 2025</p>
+                  <p><strong>⏰ Time:</strong> 3:00 PM onwards</p>
+                  <p><strong>📍 Venue:</strong> SO-8 & SO-2</p>
+                </div>
+
+                <div className="event-notes">
+                  <h4>Note:</h4>
+                  <ul>
+                    <li>You can participate in a Team of 4. Assemble your squad!</li>
+                    <li>Attendance will be given to each participant</li>
+                    <li>This time each and every participant will also get Participation Certificate</li>
+                  </ul>
+                </div>
+
+                <p className="call-to-action">
+                  <strong>Don't let the bugs win! Join the hunt.</strong>
                 </p>
               </div>
 
