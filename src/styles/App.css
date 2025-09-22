@@ -62,6 +62,9 @@ body {
   .login-page-wrapper {
     padding: 1rem !important;
     min-height: 100vh !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-top: 2rem !important;
   }
   
   .login-form-container {

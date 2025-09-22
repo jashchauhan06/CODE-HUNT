@@ -42,7 +42,7 @@ const RegistrationForm: React.FC = () => {
     try {
       // Filter out empty members first
       const validMembers = members.filter(member => 
-        member.name.trim() && member.prn.trim() && member.year && member.section
+        member.name.trim() && member.prn.trim() && member.year && member.section && member.email.trim() && member.phone.trim()
       );
 
       // Check if user is logged in
@@ -117,7 +117,13 @@ const RegistrationForm: React.FC = () => {
         team_name: teamName,
         members: validMembers,
         member1_email: validMembers[0]?.email || '',
-        member1_phone: validMembers[0]?.phone || ''
+        member1_phone: validMembers[0]?.phone || '',
+        member2_email: validMembers[1]?.email || '',
+        member2_phone: validMembers[1]?.phone || '',
+        member3_email: validMembers[2]?.email || '',
+        member3_phone: validMembers[2]?.phone || '',
+        member4_email: validMembers[3]?.email || '',
+        member4_phone: validMembers[3]?.phone || ''
       };
 
       console.log('Submitting registration:', registrationData);
@@ -237,37 +243,33 @@ const RegistrationForm: React.FC = () => {
         </div>
       )}
 
-      {index === 0 && (
-        <>
-          <div className="form-row">
-            <div className="form-group">
-              <label className="form-label">Email ID of member {index + 1} *</label>
-              <input
-                type="email"
-                value={member.email}
-                onChange={(e) => handleMemberChange(index, 'email', e.target.value)}
-                className="form-input"
-                placeholder="Enter email address"
-                required
-              />
-            </div>
-          </div>
+      <div className="form-row">
+        <div className="form-group">
+          <label className="form-label">Email ID of member {index + 1} *</label>
+          <input
+            type="email"
+            value={member.email}
+            onChange={(e) => handleMemberChange(index, 'email', e.target.value)}
+            className="form-input"
+            placeholder="Enter email address"
+            required
+          />
+        </div>
+      </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label className="form-label">Phone Number of Member {index + 1} *</label>
-              <input
-                type="tel"
-                value={member.phone}
-                onChange={(e) => handleMemberChange(index, 'phone', e.target.value)}
-                className="form-input"
-                placeholder="Enter phone number"
-                required
-              />
-            </div>
-          </div>
-        </>
-      )}
+      <div className="form-row">
+        <div className="form-group">
+          <label className="form-label">Phone Number of Member {index + 1} *</label>
+          <input
+            type="tel"
+            value={member.phone}
+            onChange={(e) => handleMemberChange(index, 'phone', e.target.value)}
+            className="form-input"
+            placeholder="Enter phone number"
+            required
+          />
+        </div>
+      </div>
     </div>
   );
 
