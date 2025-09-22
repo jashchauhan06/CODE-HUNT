@@ -1,3 +1,64 @@
+/* Force Desktop Layout on Mobile */
+html, body {
+  min-width: 1200px !important;
+  overflow-x: auto !important;
+}
+
+body {
+  min-width: 1200px !important;
+  width: 100% !important;
+}
+
+/* Override all mobile media queries to force desktop layout */
+@media (max-width: 768px) {
+  .event-page-content-wrapper {
+    flex-direction: row !important;
+    padding: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+  
+  .event-page-left {
+    flex: 0 0 300px !important;
+  }
+  
+  .event-page-desktop-only {
+    display: block !important;
+  }
+  
+  .event-page-mobile-only {
+    display: none !important;
+  }
+  
+  .event-page-mobile-only {
+    display: none !important;
+  }
+  
+  .event-page-desktop-only {
+    display: block !important;
+  }
+  
+  .event-page-mobile-only {
+    display: none !important;
+  }
+  
+  .event-page-desktop-only {
+    display: block !important;
+  }
+  
+  .event-page-mobile-only {
+    display: none !important;
+  }
+  
+  .event-page-desktop-only {
+    display: block !important;
+  }
+  
+  .event-page-mobile-only {
+    display: none !important;
+  }
+}
+
 /* App-specific styles */
 .page-wrapper {
   min-height: 100vh;
