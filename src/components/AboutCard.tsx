@@ -54,6 +54,9 @@ const AboutCard: React.FC<AboutCardProps> = ({ event }) => {
                   <p><strong>🗓 Date:</strong> Tuesday, 23 Sep 2025</p>
                   <p><strong>⏰ Time:</strong> 3:00 PM onwards</p>
                   <p><strong>📍 Venue:</strong> SO-8 & SO-2</p>
+                  <p><strong>🔗 Venue Links:</strong></p>
+                  <p><a href="https://codehunt-hashira.vercel.app/" target="_blank" rel="noopener noreferrer" style={{color: '#8B5CF6', textDecoration: 'underline'}}>S-08 - Hashira Training</a></p>
+                  <p><a href="https://code-hunt-demon-website.vercel.app/" target="_blank" rel="noopener noreferrer" style={{color: '#8B5CF6', textDecoration: 'underline'}}>S-02 - Demon Squad</a></p>
                 </div>
 
                 <div className="event-notes">
