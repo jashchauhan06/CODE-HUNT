@@ -40,10 +40,34 @@ const RegistrationForm: React.FC = () => {
     setSuccess(false);
 
     try {
-      // Filter out empty members first
-      const validMembers = members.filter(member => 
-        member.name.trim() && member.prn.trim() && member.year && member.section && member.email.trim() && member.phone.trim()
-      );
+      // Determine which members are provided and validate accordingly
+      const hasAnyField = (m: Member) =>
+        (m.name?.trim() || m.prn?.trim() || m.email?.trim() || m.phone?.trim() || m.year || m.section || m.otherSection);
+
+      // Ensure Member 1 is completely filled
+      const m1 = members[0];
+      const m1Complete = m1 &&
+        m1.name.trim() && m1.prn.trim() && m1.year && m1.section && m1.email.trim() && m1.phone.trim();
+
+      if (!m1Complete) {
+        setError('Please complete all details for Member 1.');
+        return;
+      }
+
+      // Include Member 1 and any additional members that were started
+      const candidateMembers = members.filter((m, i) => i === 0 ? true : hasAnyField(m));
+
+      // Validate any optional members that were started
+      for (let i = 1; i < candidateMembers.length; i++) {
+        const m = candidateMembers[i];
+        const complete = m.name.trim() && m.prn.trim() && m.year && m.section && m.email.trim() && m.phone.trim();
+        if (!complete) {
+          setError(`Please complete all fields for Member ${i + 1} or clear them to keep it optional.`);
+          return;
+        }
+      }
+
+      const validMembers = candidateMembers;
 
       // Check if user is logged in
       if (!user) {
@@ -159,9 +183,13 @@ const RegistrationForm: React.FC = () => {
     }
   };
 
-  const renderMemberForm = (member: Member, index: number) => (
+  const renderMemberForm = (member: Member, index: number) => {
+    const hasAny = !!(member.name?.trim() || member.prn?.trim() || member.email?.trim() || member.phone?.trim() || member.year || member.section || member.otherSection);
+    const isRequired = index === 0 || hasAny;
+
+    return (
     <div key={index} className="member-form">
-      <h3 className="member-title">Name of MEMBER {index + 1} *</h3>
+      <h3 className="member-title">Name of MEMBER {index + 1}{index === 0 ? ' *' : ''}</h3>
       <div className="form-row">
         <div className="form-group">
           <input
@@ -170,33 +198,33 @@ const RegistrationForm: React.FC = () => {
             onChange={(e) => handleMemberChange(index, 'name', e.target.value)}
             className="form-input"
             placeholder={`Enter name of member ${index + 1}`}
-            required
+            required={isRequired}
           />
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group">
-          <label className="form-label">PRN of member {index + 1} *</label>
+          <label className="form-label">PRN of member {index + 1}{index === 0 ? ' *' : ''}</label>
           <input
             type="text"
             value={member.prn}
             onChange={(e) => handleMemberChange(index, 'prn', e.target.value)}
             className="form-input"
             placeholder="Enter PRN"
-            required
+            required={isRequired}
           />
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group">
-          <label className="form-label">Year *</label>
+          <label className="form-label">Year{index === 0 ? ' *' : ''}</label>
           <select
             value={member.year}
             onChange={(e) => handleMemberChange(index, 'year', e.target.value)}
             className="form-select"
-            required
+            required={isRequired}
           >
             <option value="">Select Year</option>
             <option value="1">1</option>
@@ -209,12 +237,12 @@ const RegistrationForm: React.FC = () => {
 
       <div className="form-row">
         <div className="form-group">
-          <label className="form-label">Section *</label>
+          <label className="form-label">Section{index === 0 ? ' *' : ''}</label>
           <select
             value={member.section}
             onChange={(e) => handleMemberChange(index, 'section', e.target.value)}
             className="form-select"
-            required
+            required={isRequired}
           >
             <option value="">Select Section</option>
             <option value="A">A</option>
@@ -237,7 +265,7 @@ const RegistrationForm: React.FC = () => {
               onChange={(e) => handleMemberChange(index, 'otherSection', e.target.value)}
               className="form-input"
               placeholder="Please specify section"
-              required
+              required={isRequired}
             />
           </div>
         </div>
@@ -245,33 +273,34 @@ const RegistrationForm: React.FC = () => {
 
       <div className="form-row">
         <div className="form-group">
-          <label className="form-label">Email ID of member {index + 1} *</label>
+          <label className="form-label">Email ID of member {index + 1}{index === 0 ? ' *' : ''}</label>
           <input
             type="email"
             value={member.email}
             onChange={(e) => handleMemberChange(index, 'email', e.target.value)}
             className="form-input"
             placeholder="Enter email address"
-            required
+            required={isRequired}
           />
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group">
-          <label className="form-label">Phone Number of Member {index + 1} *</label>
+          <label className="form-label">Phone Number of Member {index + 1}{index === 0 ? ' *' : ''}</label>
           <input
             type="tel"
             value={member.phone}
             onChange={(e) => handleMemberChange(index, 'phone', e.target.value)}
             className="form-input"
             placeholder="Enter phone number"
-            required
+            required={isRequired}
           />
         </div>
       </div>
     </div>
-  );
+    );
+  };
 
   return (
     <div className="registration-form-container">

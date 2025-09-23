@@ -20,7 +20,7 @@ const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
             className="csi-logo"
           />
           <div className="csi-text">
-            <div className="csi-title">CSI STUDENT BRANCH PRESENTS</div>
+            <div className="csi-title">CSI STUDENT CHAPTER PRESENTS</div>
           </div>
         </div>
         <div className="right-wrapper min-width-0">
